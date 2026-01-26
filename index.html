@@ -3,43 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Primera Página Web</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Matriz de Proyectos - MEDRA</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f4f7f6; color: #333; margin: 20px; }
+        .container { max-width: 1000px; margin: auto; }
+        h1 { text-align: center; color: #2c3e50; }
+        .tier { border: 2px solid #ddd; border-radius: 8px; padding: 15px; margin-bottom: 20px; background: white; }
+        .tier-title { font-weight: bold; font-size: 1.2em; margin-bottom: 10px; display: block; border-bottom: 2px solid #3498db; width: fit-content; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
+        .card { padding: 15px; border-radius: 5px; background: #ecf0f1; border-left: 5px solid; text-decoration: none; color: #333; transition: 0.3s; }
+        .card:hover { transform: translateY(-3px); box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        .dev { border-left-color: #e74c3c; } /* Rojo - Acceso Total */
+        .admin { border-left-color: #f1c40f; } /* Amarillo - Gestión */
+        .ops { border-left-color: #2ecc71; } /* Verde - Módulos */
+        span.url { display: block; font-size: 0.8em; color: #7f8c8d; margin-top: 5px; }
+    </style>
 </head>
 <body>
-    <main class="container">
-        <h1>Registro Simple</h1>
-        
-        <form id="registroForm">
-            <div class="campo">
-                <label for="nombre">Nombre:</label>
-                <input 
-                    type="text" 
-                    id="nombre" 
-                    name="nombre" 
-                    placeholder="Escribe tu nombre" 
-                    required>
-            </div>
-            
-            <div class="campo">
-                <label for="email">Email:</label>
-                <input 
-                    type="email" 
-                    id="email" 
-                    name="email" 
-                    placeholder="tu@email.com" 
-                    required>
-            </div>
-            
-            <button type="submit" id="btnRegistrar">
-                Registrar
-            </button>
-        </form>
-        
-        <!-- Aquí mostraremos mensajes o resultados más adelante -->
-        <div id="mensaje"></div>
-    </main>
 
-    <script src="script.js"></script>
+<div class="container">
+    <h1>Estructura de Mega Proyecto MEDRA</h1>
+
+    <div class="tier">
+        <span class="tier-title">Nivel 1: Control Total (Root)</span>
+        <div class="grid">
+            <a href="#" class="card dev">
+                <strong>MATRIZ</strong>
+                <span class="url">matriz.medra.cl</span>
+                <p><small>Acceso a todos los módulos, empresas y configuración global.</small></p>
+            </a>
+        </div>
+    </div>
+
+    <div class="tier">
+        <span class="tier-title">Nivel 2: Gestión Administrativa</span>
+        <div class="grid">
+            <a href="#" class="card admin">
+                <strong>CENTRAL</strong>
+                <span class="url">central.medra.cl</span>
+                <p><small>Gestión de usuarios y reportes generales.</small></p>
+            </a>
+        </div>
+    </div>
+
+    <div class="tier">
+        <span class="tier-title">Nivel 3: Módulos Operativos (Proyectos Separados)</span>
+        <div class="grid">
+            <a href="#" class="card ops"><strong>Laboratorio</strong><span class="url">laboratorio.medra.cl</span></a>
+            <a href="#" class="card ops"><strong>Gestión OC</strong><span class="url">gestionoc.medra.cl</span></a>
+            <a href="#" class="card ops"><strong>Consignación</strong><span class="url">consignacion.medra.cl</span></a>
+            <a href="#" class="card ops"><strong>Presupuesto</strong><span class="url">presupuesto.medra.cl</span></a>
+            <a href="#" class="card ops"><strong>Implantes</strong><span class="url">implantes.medra.cl</span></a>
+            <a href="#" class="card ops"><strong>Cuentas</strong><span class="url">cuentas.medra.cl</span></a>
+        </div>
+    </div>
+</div>
+
 </body>
 </html>
